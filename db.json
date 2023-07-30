@@ -2,11 +2,19 @@
   "posts": [
     {
       "id": 5,
-      "firstName": "v",
-      "lastName": "vef",
-      "email": "ve",
-      "mobile": "ve",
-      "salary": "evr"
+      "firstName": "Iman",
+      "lastName": "Adithya",
+      "email": "iman07@gmail.com",
+      "mobile": "0788248177",
+      "salary": "200000"
+    },
+    {
+      "id": 6,
+      "firstName": "Ushan",
+      "lastName": "Wk",
+      "email": "ushan89@gmail.com",
+      "mobile": "077536262",
+      "salary": "90000"
     }
   ],
   "comments": [],

@@ -32,6 +32,7 @@ export class EmployeeDashBoardComponent implements OnInit {
   }
 
   postEmployeDetail(){
+    this.formValue.reset();
     this.employeeModelObj.firstName=this.formValue.value.firstName;
     this.employeeModelObj.lastName=this.formValue.value.lastName;
     this.employeeModelObj.email=this.formValue.value.email;
@@ -83,6 +84,9 @@ export class EmployeeDashBoardComponent implements OnInit {
 
     this.api.updateEmploye(this.employeeModelObj,this.employeeModelObj.id).subscribe(res=>{
       alert("Employee Updated");
+      let ref=document.getElementById('cancel');
+      ref?.click();
+      this.getAllEmployee();
     })
   }
 
