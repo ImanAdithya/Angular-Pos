@@ -15,6 +15,14 @@
       "email": "ushan89@gmail.com",
       "mobile": "077536262",
       "salary": "90000"
+    },
+    {
+      "id": 7,
+      "firstName": "sathin",
+      "lastName": "thenuja",
+      "email": "sathin34gmail.com",
+      "mobile": "07837282",
+      "salary": "80000"
     }
   ],
   "comments": [],
