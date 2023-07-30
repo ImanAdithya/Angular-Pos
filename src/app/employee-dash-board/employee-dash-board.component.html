@@ -2,7 +2,7 @@
    <div class="container-fluid">
       <h1 style="color: white;">POS APPLICATION</h1>
       <div class="d-flex">
-        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">ADD EMPLOYEE</button>
+        <button  class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">ADD EMPLOYEE</button>
       </div>
    </div>
 </nav>
@@ -29,8 +29,8 @@
         <td>{{row.mobile}}</td>
         <td>{{row.salary}}</td>
       <td>
-        <button class="btn btn-info">Update</button>
-        <button (click)="deleteEmploye(row)" class="btn btn-danger mx-3">Delete</button>
+        <button  (click)="onEdit(row)" class="btn btn-info" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">EDIT</button>
+        <button (click)="deleteEmploye(row)" class="btn btn-danger mx-3">DELETE</button>
       </td>
     </tr>
   </tbody>
@@ -79,6 +79,7 @@
       <div class="modal-footer">
         <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button type="submit" (click)="postEmployeDetail()" class="btn btn-primary">Save</button>
+        <button type="submit"  (click)="UpdateEmployee()"  class="btn btn-success"></button>
       </div>
     </div>
   </div>
