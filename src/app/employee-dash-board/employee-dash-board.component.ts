@@ -45,6 +45,7 @@ export class EmployeeDashBoardComponent implements OnInit {
       alert("Employee Added Succuss");
       let ref=document.getElementById('cancel');
       ref?.click();
+      this.getAllEmployee();
     },
     err=>{
       alert("Something went Wrong..");
@@ -54,6 +55,13 @@ export class EmployeeDashBoardComponent implements OnInit {
   getAllEmployee(){
     this.api.getEmployee().subscribe(res=>{
       this.employeeData=res;
+    })
+  }
+
+  deleteEmploye(row : any){
+    this.api.deleteEmploye(row.id).subscribe(res=>{
+      alert("Employee Delete Succuss");
+      this.getAllEmployee();
     })
   }
 
