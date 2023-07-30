@@ -2,7 +2,7 @@
    <div class="container-fluid">
       <h1 style="color: white;">POS APPLICATION</h1>
       <div class="d-flex">
-        <button  class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">ADD EMPLOYEE</button>
+        <button  (click)="clickAddEmployee()" class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">ADD EMPLOYEE</button>
       </div>
    </div>
 </nav>
@@ -78,8 +78,8 @@
       </div>
       <div class="modal-footer">
         <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="submit" (click)="postEmployeDetail()" class="btn btn-primary">SAVE</button>
-        <button type="submit"  (click)="UpdateEmployee()"  class="btn btn-success">UPDATE</button>
+        <button type="submit"  *ngIf="showAdd" (click)="postEmployeDetail()" class="btn btn-primary">SAVE</button>
+        <button type="submit"  *ngIf="showUpdate"  (click)="UpdateEmployee()"  class="btn btn-success">UPDATE</button>
       </div>
     </div>
   </div>

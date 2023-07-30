@@ -17,6 +17,10 @@ export class EmployeeDashBoardComponent implements OnInit {
 
    employeeData ! :any;
 
+   showAdd ! : boolean;
+
+   showUpdate ! : boolean;
+
   constructor(private formbuilder :FormBuilder,private api:ApiService){
   }
 
@@ -53,6 +57,12 @@ export class EmployeeDashBoardComponent implements OnInit {
     })
   }
 
+  clickAddEmployee(){
+    this.formValue.reset();
+    this.showAdd=true;
+    this.showUpdate=false;
+  }
+
   getAllEmployee(){
     this.api.getEmployee().subscribe(res=>{
       this.employeeData=res;
@@ -67,6 +77,8 @@ export class EmployeeDashBoardComponent implements OnInit {
   }
 
   onEdit(row : any){
+    this.showAdd=false;
+    this.showUpdate=true;
      this.employeeModelObj.id=row.id;
       this.formValue.controls['firstName'].setValue(row.firstName);
       this.formValue.controls['lastName'].setValue(row.lastName);
